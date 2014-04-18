@@ -67,6 +67,8 @@ if ( class_exists( 'WP_Importer' ) ) {
         function import()
         {
 
+            @set_time_limit(0);
+
             $host = esc_sql($_POST['host']);
             $user = esc_sql($_POST['user']);
             $password = esc_sql($_POST['password']);
